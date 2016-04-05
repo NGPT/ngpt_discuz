@@ -243,6 +243,7 @@ SQL;
         // JavaScript 中的 fields 从0开始
         $return_prepare_fields = 'var fields = [];';
         foreach ($fields as $fieldkey => $fieldvalue){
+            $fieldvalue = addslashes($fieldvalue);
             $return_prepare_fields .= "fields[{$fieldkey}] = '{$fieldvalue}';";
         }
 
